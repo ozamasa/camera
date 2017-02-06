@@ -1,4 +1,3 @@
-vi /home/pi/camera/camera.sh
 #!/bin/bash
 
 Y=$(date +"%Y")
