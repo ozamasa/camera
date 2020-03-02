@@ -3,5 +3,5 @@ Y=$(date +"%Y")
 M=$(date +"%m")
 D=$(date +"%d")
 DATE=$(date +"%Y-%m-%d_%H%M")
-xvfb-run wkhtmltoimage --crop-h 540 --crop-w 740 --crop-x 30 --crop-y 52 http://live.shiolab.com /home/pi/raspberry/plot/$DATE.jpg
-sudo aws s3 mv /home/pi/raspberry/plot/$DATE.jpg s3://s3.shiolab.com/sensor/shiolab/$Y/$M/$D/
+xvfb-run wkhtmltoimage --encoding utf8 --crop-h 502 --crop-w 552 --crop-x 27 --crop-y 302 http://www.jma.go.jp/jp/amedas/207.html?elementCode=2 /home/ozamasa/amedas/$DATE.jpg
+aws s3 mv /home/ozamasa/amedas/$DATE.jpg s3://s3.shiolab.com/amedas/$Y/$M/$D/
